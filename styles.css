@@ -1,4 +1,10 @@
 /* styles.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -129,27 +135,19 @@ main {
   height: auto;
 }
 
-/* Ajustes para la imagen en la sección de "Sobre Mí" */
-.about img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Ajuste para la imagen en la sección de "Servicios" */
-.services .image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Ajuste para la imagen en la sección de "Ubicación" */
-.location img {
+/* Ajustes para las imágenes en las secciones específicas */
+.image-container img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   display: block;
   margin: 0 auto;
+}
+
+/* Ajustes para la imagen en la sección de "Sobre Mí" */
+.about img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Añadir color de fondo a la sección de calificaciones */
@@ -174,105 +172,79 @@ main {
   border-bottom: 1px solid #ddd;
 }
 
-.services .image-container {
-  text-align: center;
-  margin-top: 20px; /* Espacio opcional arriba de la imagen */
-}
-
-.services .image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block; /* Asegura que la imagen no tenga márgenes innecesarios */
-  margin: 0 auto; /* Centra la imagen dentro del contenedor */
-}
-
-.location .image-container {
-  text-align: center;
-  margin-top: 20px; /* Espacio opcional arriba de la imagen */
-}
-
-.location .image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block; /* Asegura que la imagen no tenga márgenes innecesarios */
-  margin: 0 auto; /* Centra la imagen dentro del contenedor */
-}
-
 /* Animaciones */
 @keyframes slide-in {
   0% {
-      opacity: 0;
-      transform: translateY(-20px);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-container {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .menu {
-      top: 70px;
-      right: 10px;
-      width: 90%;
+    top: 70px;
+    right: 10px;
+    width: 90%;
   }
 
   .cause {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 
   .whatsapp-button {
-      width: 50px;
+    width: 50px;
   }
 
   #map {
-      height: 200px;
+    height: 200px;
   }
 }
 
 @media (max-width: 480px) {
   .logo {
-      height: 50px;
+    height: 50px;
   }
 
   .menu-icon {
-      height: 30px;
+    height: 30px;
   }
 
   .cause img {
-      max-width: 80px;
+    max-width: 80px;
   }
 
   .about img {
-      max-width: 100%;
-      height: auto;
+    max-width: 100%;
+    height: auto;
   }
-  
+
   /* Ajuste para el logo en dispositivos móviles */
   .header-container {
-      justify-content: space-between;
+    justify-content: space-between;
   }
-  
+
   .menu {
-      position: static;
-      width: 100%;
-      box-shadow: none;
+    position: static;
+    width: 100%;
+    box-shadow: none;
   }
-  
+
   .menu-icon {
-      display: block;
+    display: block;
   }
-  
+
   .logo {
-      display: block;
-      margin: 0 auto;
+    display: block;
+    margin: 0 auto;
   }
 }
