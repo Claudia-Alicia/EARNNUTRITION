@@ -131,8 +131,9 @@ main {
 }
 
 .cause img {
-  max-width: 120px;
+  max-width: 100%; /* Asegura que la imagen no exceda el contenedor */
   height: auto;
+  display: block;
 }
 
 /* Ajustes para las imágenes en las secciones específicas */
