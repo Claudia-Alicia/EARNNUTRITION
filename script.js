@@ -3,13 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const menuIcon = document.getElementById("menu-icon");
     const menu = document.getElementById("menu");
 
-    // Alternar la visibilidad del menú
+    // Alternar la visibilidad del menú usando una clase CSS
     menuIcon.addEventListener("click", () => {
-        if (menu.style.display === "block" || menu.style.display === "") {
-            menu.style.display = "none";
-        } else {
-            menu.style.display = "block";
-        }
+        menu.classList.toggle("active");
     });
 
     // Agregar animación de entrada a las secciones cuando se desplace la página
